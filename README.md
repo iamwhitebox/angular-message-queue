@@ -2,28 +2,10 @@
 
 # Angular Message Queue
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+The goal of the exercise is to implement a light-weight architecture used to dispatch messages across blocks as shown in the following Figure:
 
-## Development server
+![](angular-message-queue-diagram.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Each block is an Angular component that can subscribe to a topic, can send a message, and receive messages based on the topics it is subscribed to. In the above example, Block 2 is subscribed to Topic B. When Block 3 send a message on Topic B, Block 2 should receive the message but not Block 1.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Create an Angular application to implement the above architecture. You will have one day to work on this exercise. We will have a 15-min video conference to look at the solution together.
